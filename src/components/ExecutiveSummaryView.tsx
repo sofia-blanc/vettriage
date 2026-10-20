@@ -15,7 +15,8 @@ import {
   ChevronRight,
   Sparkles,
   ArrowRight,
-  Info
+  Info,
+  Stethoscope
 } from 'lucide-react';
 import { 
   PROJECT_METADATA, 
@@ -66,8 +67,8 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
               onClick={() => onNavigateToTab('simulador')}
               className="px-4 py-2.5 rounded-xl bg-[#99CDD8] hover:bg-[#85BCC7] text-[#1D3D44] font-bold text-sm flex items-center gap-2 shadow-md transition-all cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-[#1D3D44]" />
-              <span>Probar Simulador Clínico de Triaje</span>
+              <Stethoscope className="w-4 h-4 text-[#1D3D44]" />
+              <span>Ir a Estación del Veterinario</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -82,81 +83,62 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
         </div>
       </div>
 
-      {/* KPI Cards Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-medium uppercase tracking-wider">Avance Ponderado</span>
-            <TrendingUp className="w-4 h-4 text-emerald-600" />
+      {/* KPI Cards Grid (3 cards without holgura) */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white p-5 rounded-xl border border-[#CFD6C4] shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex items-center justify-between text-[#657166] mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider">Avance Ponderado</span>
+            <TrendingUp className="w-4 h-4 text-[#2F614E]" />
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-bold text-slate-900">50,0 %</span>
-            <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[#3D4A3E]">50,0 %</span>
+            <span className="text-xs font-bold text-[#2F614E] bg-[#DAEBE3] px-2 py-0.5 rounded">
               Índice 1,00
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2">
+          <p className="text-xs text-[#7A877B] mt-2">
             Planeado: 50,0 % · 65 de 134 días-tarea cerrados + 2 días de T-13
           </p>
-          <div className="w-full bg-slate-100 rounded-full h-1.5 mt-3">
-            <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: '50%' }}></div>
+          <div className="w-full bg-[#EAEFEA] rounded-full h-1.5 mt-3">
+            <div className="bg-[#99CDD8] h-1.5 rounded-full" style={{ width: '50%' }}></div>
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-medium uppercase tracking-wider">Tareas Vencidas</span>
-            <CheckCircle2 className="w-4 h-4 text-blue-600" />
+        <div className="bg-white p-5 rounded-xl border border-[#CFD6C4] shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex items-center justify-between text-[#657166] mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider">Tareas Vencidas</span>
+            <CheckCircle2 className="w-4 h-4 text-[#1D3D44]" />
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-bold text-slate-900">16 / 16</span>
-            <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[#3D4A3E]">16 / 16</span>
+            <span className="text-xs font-bold text-[#1D3D44] bg-[#DAEBE3] px-2 py-0.5 rounded">
               100 % cerradas
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2">
+          <p className="text-xs text-[#7A877B] mt-2">
             Cero tareas vencidas pendientes (16 de 38 finitas, 42%)
           </p>
-          <div className="w-full bg-slate-100 rounded-full h-1.5 mt-3">
-            <div className="bg-blue-600 h-1.5 rounded-full" style={{ width: '100%' }}></div>
+          <div className="w-full bg-[#EAEFEA] rounded-full h-1.5 mt-3">
+            <div className="bg-[#657166] h-1.5 rounded-full" style={{ width: '100%' }}></div>
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-medium uppercase tracking-wider">Signos Sólidos</span>
-            <ShieldCheck className="w-4 h-4 text-indigo-600" />
+        <div className="bg-white p-5 rounded-xl border border-[#CFD6C4] shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex items-center justify-between text-[#657166] mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider">Signos Sólidos</span>
+            <ShieldCheck className="w-4 h-4 text-[#2F614E]" />
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-bold text-slate-900">12 / 22</span>
-            <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-1.5 py-0.5 rounded">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[#3D4A3E]">12 / 22</span>
+            <span className="text-xs font-bold text-[#2F614E] bg-[#DAEBE3] px-2 py-0.5 rounded">
               Cumple OE1
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2">
+          <p className="text-xs text-[#7A877B] mt-2">
             12 signos con respaldo; 10 son limitaciones declaradas
           </p>
-          <div className="w-full bg-slate-100 rounded-full h-1.5 mt-3">
-            <div className="bg-indigo-600 h-1.5 rounded-full" style={{ width: '54.5%' }}></div>
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-medium uppercase tracking-wider">Holgura Ruta Crítica</span>
-            <Clock className="w-4 h-4 text-rose-600" />
-          </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-bold text-rose-600">0 días</span>
-            <span className="text-xs font-semibold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded">
-              Alerta R11
-            </span>
-          </div>
-          <p className="text-xs text-slate-500 mt-2">
-            T-35 finaliza el 3-dic; cualquier atraso &gt; 1 día activa comité
-          </p>
-          <div className="w-full bg-slate-100 rounded-full h-1.5 mt-3">
-            <div className="bg-rose-500 h-1.5 rounded-full" style={{ width: '100%' }}></div>
+          <div className="w-full bg-[#EAEFEA] rounded-full h-1.5 mt-3">
+            <div className="bg-[#99CDD8] h-1.5 rounded-full" style={{ width: '54.5%' }}></div>
           </div>
         </div>
       </div>
@@ -195,7 +177,7 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
               <div>
                 <strong className="text-[#3D4A3E]">Validación sin veterinario presencial:</strong>
                 <p className="text-xs text-[#657166] mt-0.5">
-                  Retiro de la clínica piloto el 29-sep. Las etiquetas se compensan contrastando contra 13 fuentes de literatura y aplicando la regla dorada <em>"ante la duda, subir de nivel"</em>.
+                  Retiro de la clínica piloto el 29-sep. Las etiquetas se compensan contrastando contra 13 fuentes de literatura y aplicando la regla dorada "ante la duda, subir de nivel".
                 </p>
               </div>
             </div>
@@ -254,19 +236,19 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
       </div>
 
       {/* Resumen por Fases */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-[#CFD6C4] shadow-sm">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className="text-base font-bold text-slate-900">
+            <h3 className="text-base font-bold text-[#3D4A3E]">
               Estado de las 5 Fases del Proyecto
             </h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-[#7A877B]">
               Total 39 tareas programadas (16 completadas, 2 en curso, 21 próximas)
             </p>
           </div>
           <button
             onClick={() => onNavigateToTab('gantt')}
-            className="text-xs font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1 cursor-pointer"
+            className="text-xs font-semibold text-[#1D3D44] hover:underline flex items-center gap-1 cursor-pointer"
           >
             <span>Ver desglose completo</span>
             <ChevronRight className="w-4 h-4" />
@@ -276,7 +258,7 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-50/70 text-slate-600 font-semibold">
+              <tr className="border-b border-[#CFD6C4] bg-[#F7F9F7] text-[#657166] font-semibold">
                 <th className="py-2.5 px-3">Fase</th>
                 <th className="py-2.5 px-3">Periodo</th>
                 <th className="py-2.5 px-3 text-center">Tareas</th>
@@ -286,17 +268,17 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
                 <th className="py-2.5 px-3 text-right">Estado</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
+            <tbody className="divide-y divide-[#EAEFEA] text-[#3D4A3E]">
               {PHASES_SUMMARY.map(p => (
-                <tr key={p.phase} className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-3 px-3 font-semibold text-slate-900">{p.phase}</td>
-                  <td className="py-3 px-3 text-slate-500">{p.period}</td>
-                  <td className="py-3 px-3 text-center font-bold text-slate-800">{p.totalTasks}</td>
-                  <td className="py-3 px-3 text-center text-emerald-700 font-semibold">{p.completed}</td>
-                  <td className="py-3 px-3 text-center text-blue-700 font-semibold">{p.inProgress}</td>
-                  <td className="py-3 px-3 text-center text-slate-500">{p.upcoming}</td>
+                <tr key={p.phase} className="hover:bg-[#F4FAF7] transition-colors">
+                  <td className="py-3 px-3 font-semibold text-[#3D4A3E]">{p.phase}</td>
+                  <td className="py-3 px-3 text-[#7A877B]">{p.period}</td>
+                  <td className="py-3 px-3 text-center font-bold text-[#3D4A3E]">{p.totalTasks}</td>
+                  <td className="py-3 px-3 text-center text-[#2F614E] font-bold">{p.completed}</td>
+                  <td className="py-3 px-3 text-center text-[#1D3D44] font-bold">{p.inProgress}</td>
+                  <td className="py-3 px-3 text-center text-[#7A877B]">{p.upcoming}</td>
                   <td className="py-3 px-3 text-right">
-                    <span className={`inline-block px-2.5 py-1 rounded-full text-[11px] font-semibold border ${p.stateBadge}`}>
+                    <span className="inline-block px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#DAEBE3] text-[#2F614E] border border-[#BDD9CE]">
                       {p.state}
                     </span>
                   </td>
@@ -304,61 +286,6 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
               ))}
             </tbody>
           </table>
-        </div>
-      </div>
-
-      {/* Integrantes del Equipo y Carga de Trabajo */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-        <div className="flex items-center gap-2 mb-4">
-          <Users className="w-5 h-5 text-indigo-600" />
-          <h3 className="text-base font-bold text-slate-900">
-            Frentes de Trabajo y Recursos (Lectura por Integrante)
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {TEAM_MEMBERS.map(member => (
-            <div key={member.name} className="p-5 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-10 h-10 rounded-full bg-gradient-to-tr ${member.avatarColor} text-white font-bold text-sm flex items-center justify-center shadow`}>
-                    {member.name.split(' ')[0][0]}{member.name.split(' ')[1] ? member.name.split(' ')[1][0] : ''}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm leading-tight">{member.name}</h4>
-                    <span className="text-xs text-indigo-600 font-medium">{member.role}</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-slate-600 leading-relaxed mb-3">
-                  {member.responsibilities}
-                </p>
-
-                <div className="bg-white p-3 rounded-lg border border-slate-200/80 mb-3 space-y-1 text-xs">
-                  <div className="flex justify-between text-slate-500">
-                    <span>Tareas cerradas:</span>
-                    <strong className="text-emerald-700 font-bold">{member.tasksCompleted}</strong>
-                  </div>
-                  <div className="flex justify-between text-slate-500">
-                    <span>En curso:</span>
-                    <strong className="text-blue-700 font-bold">{member.tasksInProgress}</strong>
-                  </div>
-                  <div className="flex justify-between text-slate-500">
-                    <span>Pendientes futuras:</span>
-                    <strong className="text-slate-800 font-bold">{member.tasksPending}</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-2 pt-2 border-t border-slate-200 text-xs">
-                <span className="font-semibold text-slate-700">Situación actual:</span>
-                <p className="text-slate-500 mt-0.5">{member.currentFocus}</p>
-                <div className="mt-2 p-2 rounded bg-amber-50 text-amber-800 text-[11px] border border-amber-200">
-                  {member.availabilityNote}
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
@@ -371,29 +298,29 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
               Acciones Correctivas del Comité (4–7 de Octubre)
             </h3>
           </div>
-          <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+          <span className="text-xs font-bold text-[#2F614E] bg-[#DAEBE3] px-2.5 py-1 rounded-full border border-[#BDD9CE]">
             7 de 7 Cerradas (100 %)
           </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
           {CORRECTIVE_ACTIONS.map(ca => (
-            <div key={ca.id} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                ✓
+            <div key={ca.id} className="p-3.5 rounded-xl border border-[#CFD6C4] bg-[#F7F9F7] flex items-start gap-3">
+              <span className="w-5 h-5 rounded-full bg-[#DAEBE3] text-[#2F614E] flex items-center justify-center shrink-0 mt-0.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#2F614E]" />
               </span>
               <div className="space-y-1">
                 <div className="flex items-center justify-between gap-2">
-                  <strong className="text-slate-900 font-medium">{ca.action}</strong>
-                  <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded">
+                  <strong className="text-[#3D4A3E] font-medium">{ca.action}</strong>
+                  <span className="text-[11px] font-bold text-[#2F614E] bg-[#DAEBE3] px-2 py-0.5 rounded">
                     {ca.status}
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-slate-500">
-                  <span>Resp: <strong className="text-slate-700">{ca.responsible}</strong></span>
-                  <span>Fecha: <strong className="text-slate-700">{ca.deadline}</strong></span>
+                <div className="flex items-center gap-3 text-xs text-[#7A877B]">
+                  <span>Resp: <strong className="text-[#4D594E]">{ca.responsible}</strong></span>
+                  <span>Fecha: <strong className="text-[#4D594E]">{ca.deadline}</strong></span>
                 </div>
-                <p className="text-xs text-slate-600 pt-0.5">
+                <p className="text-xs text-[#657166] pt-0.5">
                   Evidencia: {ca.evidence}
                 </p>
               </div>

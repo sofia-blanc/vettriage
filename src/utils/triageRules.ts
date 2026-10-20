@@ -327,27 +327,27 @@ export function evaluateTriage(input: TriageInput): TriageEvaluation {
   const escalationSteps: string[] = [];
 
   if (finalLevel === 'Alto') {
-    immediateRecommendations.push('🔴 Mantener al paciente en posición esternal, con cuello extendido y vía aérea despejada.');
-    immediateRecommendations.push('🔴 No administrar comida, leche, agua ni medicamentos orales humanos (prohibido paracetamol/ibuprofeno).');
-    immediateRecommendations.push('🔴 Trasladar inmediatamente en un transportín rígido o toalla estabilizadora manteniendo temperatura estable.');
-    immediateRecommendations.push('🔴 Llamar a la clínica de urgencias en camino para que preparen box de reanimación y oxigenoterapia.');
+    immediateRecommendations.push('Mantener al paciente en posición esternal, con cuello extendido y vía aérea despejada.');
+    immediateRecommendations.push('No administrar comida, leche, agua ni medicamentos orales humanos (prohibido paracetamol/ibuprofeno).');
+    immediateRecommendations.push('Trasladar inmediatamente en un transportín rígido o toalla estabilizadora manteniendo temperatura estable.');
+    immediateRecommendations.push('Llamar a la clínica de urgencias en camino para que preparen box de reanimación y oxigenoterapia.');
 
     escalationSteps.push('Escalamiento Inmediato (T-23): Contactar central de urgencias 24h.');
     escalationSteps.push('Tiempo máximo de atención recomendado: < 15 minutos.');
     escalationSteps.push('Alerta de triage activada: prioridad de ingreso sin espera.');
   } else if (finalLevel === 'Moderado') {
-    immediateRecommendations.push('🟡 Mantener en reposo absoluto en un ambiente tranquilo y templado.');
-    immediateRecommendations.push('🟡 Retirar acceso a raciones grandes de comida; permitir pequeños sorbos de agua templada si no hay vómitos activos.');
-    immediateRecommendations.push('🟡 Medir frecuencia respiratoria en reposo contando elevaciones del tórax en 1 minuto.');
-    immediateRecommendations.push('🟡 Monitorear color de encías (deben ser rosadas, no blancas ni azuladas).');
+    immediateRecommendations.push('Mantener en reposo absoluto en un ambiente tranquilo y templado.');
+    immediateRecommendations.push('Retirar acceso a raciones grandes de comida; permitir pequeños sorbos de agua templada si no hay vómitos activos.');
+    immediateRecommendations.push('Medir frecuencia respiratoria en reposo contando elevaciones del tórax en 1 minuto.');
+    immediateRecommendations.push('Monitorear color de encías (deben ser rosadas, no blancas ni azuladas).');
 
     escalationSteps.push('Escalamiento Diferible (T-23): Consulta prioritaria el mismo día.');
     escalationSteps.push('Tiempo máximo de atención sugerido: < 1 a 2 horas.');
     escalationSteps.push('Criterio de re-evaluación: Si presenta vómito con sangre o debilidad motora, re-clasificar como ALTO.');
   } else {
-    immediateRecommendations.push('🟢 Monitorear ingesta voluntaria de agua y apetito durante las próximas 12-24 horas.');
-    immediateRecommendations.push('🟢 Dieta blanda de fácil digestión previa indicación.');
-    immediateRecommendations.push('🟢 Aislar de otros animales si hay sospecha de patología digestiva infecciosa.');
+    immediateRecommendations.push('Monitorear ingesta voluntaria de agua y apetito durante las próximas 12-24 horas.');
+    immediateRecommendations.push('Dieta blanda de fácil digestión previa indicación.');
+    immediateRecommendations.push('Aislar de otros animales si hay sospecha de patología digestiva infecciosa.');
 
     escalationSteps.push('Atención ambulatoria programada según disponibilidad.');
     escalationSteps.push('Criterio de alarma: Si aparecen vómitos frecuentes o letargia severa, consultar de urgencia.');

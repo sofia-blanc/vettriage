@@ -369,8 +369,8 @@ export const RisksAndDataQualityView: React.FC = () => {
                 )}
 
                 {sign.escalationRule && (
-                  <div className="text-[11px] bg-amber-50 p-2 rounded-lg border border-amber-200 text-amber-800 font-medium">
-                    ⚡ {sign.escalationRule}
+                  <div className="text-[11px] bg-[#FFF9F3] p-2 rounded-lg border border-[#FDE8D3] text-[#8C5216] font-medium">
+                    <strong className="block text-[#8C5216]">Regla de escalamiento:</strong> {sign.escalationRule}
                   </div>
                 )}
               </div>

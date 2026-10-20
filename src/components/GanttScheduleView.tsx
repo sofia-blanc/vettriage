@@ -14,7 +14,8 @@ import {
   User, 
   FileCheck,
   ChevronDown,
-  Info
+  Info,
+  X
 } from 'lucide-react';
 import { TASKS_LIST, TaskItem } from '../data/reportData';
 
@@ -273,9 +274,10 @@ export const GanttScheduleView: React.FC = () => {
               </div>
               <button
                 onClick={() => setSelectedTask(null)}
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 cursor-pointer font-bold"
+                aria-label="Cerrar detalle de tarea"
+                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 cursor-pointer"
               >
-                ✕
+                <X className="w-4 h-4" />
               </button>
             </div>
 

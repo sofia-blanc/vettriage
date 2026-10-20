@@ -104,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <Stethoscope className="w-3.5 h-3.5" />
-            <span>Simulador de Triaje</span>
+            <span>Estación del Veterinario</span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#99CDD8]"></span>
           </button>
 

@@ -21,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-900 flex flex-col font-sans selection:bg-teal-500 selection:text-white">
+    <div className="min-h-screen bg-[#FAFBF9] text-[#3D4A3E] flex flex-col font-sans selection:bg-[#99CDD8] selection:text-[#1D3D44]">
       {/* Top Header & Navigation */}
       <Header
         activeTab={activeTab}
@@ -59,21 +59,21 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="mt-auto bg-slate-900 border-t border-slate-800 text-slate-400 text-xs py-6">
+      <footer className="mt-auto bg-[#657166] border-t border-[#545E55] text-[#DAEBE3] text-xs py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
-            <p className="font-semibold text-slate-300">
+            <p className="font-semibold text-white">
               Vet-Triage · Sistema de Triaje de Urgencia Veterinaria
             </p>
-            <p className="text-[11px] text-slate-500 mt-0.5">
+            <p className="text-[11px] text-[#DAEBE3] mt-0.5">
               José Julián Sierra Rodríguez · Cristóbal Andrés Patiño Castro · Sara Sofía Blanco Ardila
             </p>
           </div>
 
-          <div className="text-[11px] text-slate-500">
+          <div className="text-[11px] text-[#DAEBE3]">
             <span>Fecha de corte: 12 de octubre de 2026 (Día 35 de 87)</span>
             <span className="mx-2">·</span>
-            <span className="text-amber-400 font-medium">Semáforo Amarillo</span>
+            <span className="text-[#FDE8D3] font-bold">Semáforo: Amarillo</span>
           </div>
         </div>
       </footer>
