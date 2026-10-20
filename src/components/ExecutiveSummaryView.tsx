@@ -33,20 +33,20 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
   return (
     <div className="space-y-8 animate-fadeIn">
       {/* Hero / Executive Highlight */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 rounded-2xl p-6 sm:p-8 text-white border border-slate-700 shadow-xl relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="bg-gradient-to-br from-[#657166] via-[#545E55] to-[#455046] rounded-2xl p-6 sm:p-8 text-white border border-[#7A877B] shadow-lg relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-96 h-96 bg-[#99CDD8]/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 max-w-4xl space-y-4">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#DAEBE3]/25 text-[#DAEBE3] border border-[#DAEBE3]/40 flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#DAEBE3]" />
               Al día con el Cronograma Oficial
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5">
-              <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#FDE8D3]/25 text-[#FDE8D3] border border-[#FDE8D3]/40 flex items-center gap-1.5">
+              <AlertTriangle className="w-3.5 h-3.5 text-[#FDE8D3]" />
               Semáforo Amarillo (Riesgo Estructural)
             </span>
-            <span className="text-xs text-slate-300">
+            <span className="text-xs text-[#DAEBE3]">
               Día 35 de 87 (40.2% del tiempo transcurrido)
             </span>
           </div>
@@ -55,27 +55,27 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
             Vet-Triage: Informe Consolidado de Avance
           </h2>
 
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-[#DAEBE3] text-sm sm:text-base leading-relaxed">
             El equipo conformado por <strong className="text-white">José Julián Sierra</strong> (líder y chatbot),{' '}
             <strong className="text-white">Cristóbal Andrés Patiño</strong> (datos y modelos) y{' '}
-            <strong className="text-white">Sara Sofía Blanco</strong> (QA y criterios de urgencia) cumple al 100% las 16 tareas vencidas al corte del 12 de octubre de 2026. El avance ponderado se sitúa en <strong className="text-emerald-300">50,0 %</strong> (Índice de desempeño 1,00). El proyecto permanece en alerta amarilla debido a la validación sin veterinario presencial, el desbalance del dataset (138 casos) y la ruta crítica sin holgura.
+            <strong className="text-white">Sara Sofía Blanco</strong> (QA y criterios de urgencia) cumple al 100% las 16 tareas vencidas al corte del 12 de octubre de 2026. El avance ponderado se sitúa en <strong className="text-[#99CDD8]">50,0 %</strong> (Índice de desempeño 1,00). El proyecto permanece en alerta amarilla debido a la validación sin veterinario presencial, el desbalance del dataset (138 casos) y la ruta crítica sin holgura.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
             <button
               onClick={() => onNavigateToTab('simulador')}
-              className="px-4 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-teal-500/20 transition-all cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-[#99CDD8] hover:bg-[#85BCC7] text-[#1D3D44] font-bold text-sm flex items-center gap-2 shadow-md transition-all cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-slate-950" />
+              <Sparkles className="w-4 h-4 text-[#1D3D44]" />
               <span>Probar Simulador Clínico de Triaje</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
               onClick={() => onNavigateToTab('gantt')}
-              className="px-4 py-2.5 rounded-xl bg-slate-700/80 hover:bg-slate-700 text-white font-medium text-sm flex items-center gap-2 border border-slate-600 transition-all cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-[#535F54] hover:bg-[#475248] text-white font-medium text-sm flex items-center gap-2 border border-[#6F7C70] transition-all cursor-pointer"
             >
-              <Calendar className="w-4 h-4 text-blue-400" />
+              <Calendar className="w-4 h-4 text-[#99CDD8]" />
               <span>Ver Gantt de 39 Tareas</span>
             </button>
           </div>
@@ -164,47 +164,47 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
       {/* Semáforo Amarillo & Cambio de Alcance del 29-sep */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Semáforo Card */}
-        <div className="bg-amber-50/50 rounded-2xl p-6 border border-amber-200 shadow-sm">
+        <div className="bg-[#FFF9F3] rounded-2xl p-6 border border-[#FDE8D3] shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-700">
-              <AlertTriangle className="w-5 h-5 text-amber-600" />
+            <div className="w-10 h-10 rounded-xl bg-[#FDE8D3] border border-[#F3CFAB] flex items-center justify-center text-[#8C5216]">
+              <AlertTriangle className="w-5 h-5 text-[#8C5216]" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-slate-900">
+              <h3 className="text-base font-bold text-[#3D4A3E]">
                 Semáforo Amarillo: Causas Estructurales
               </h3>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-[#657166]">
                 Riesgos que persisten a pesar de que el cronograma está 100% al día
               </p>
             </div>
           </div>
 
-          <div className="space-y-3 text-sm text-slate-700">
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-amber-100">
-              <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+          <div className="space-y-3 text-sm text-[#4D594E]">
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#FDE8D3]">
+              <span className="w-5 h-5 rounded-full bg-[#FDE8D3] text-[#8C5216] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
               <div>
-                <strong className="text-slate-900">Base pequeña y desbalanceada:</strong>
-                <p className="text-xs text-slate-600 mt-0.5">
+                <strong className="text-[#3D4A3E]">Base pequeña y desbalanceada:</strong>
+                <p className="text-xs text-[#657166] mt-0.5">
                   138 casos totales con solo 29 casos de nivel Alto (21%) y 15 de nivel Bajo (todos del dataset sintético D2). Esto debilita la fiabilidad de la meta de Recall ≥ 0,90 en la prueba de T-18.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-amber-100">
-              <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#FDE8D3]">
+              <span className="w-5 h-5 rounded-full bg-[#FDE8D3] text-[#8C5216] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
               <div>
-                <strong className="text-slate-900">Validación sin veterinario presencial:</strong>
-                <p className="text-xs text-slate-600 mt-0.5">
+                <strong className="text-[#3D4A3E]">Validación sin veterinario presencial:</strong>
+                <p className="text-xs text-[#657166] mt-0.5">
                   Retiro de la clínica piloto el 29-sep. Las etiquetas se compensan contrastando contra 13 fuentes de literatura y aplicando la regla dorada <em>"ante la duda, subir de nivel"</em>.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-amber-100">
-              <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#FDE8D3]">
+              <span className="w-5 h-5 rounded-full bg-[#FDE8D3] text-[#8C5216] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
               <div>
-                <strong className="text-slate-900">Ruta crítica sin holgura hasta el 3-dic:</strong>
-                <p className="text-xs text-slate-600 mt-0.5">
+                <strong className="text-[#3D4A3E]">Ruta crítica sin holgura hasta el 3-dic:</strong>
+                <p className="text-xs text-[#657166] mt-0.5">
                   Cristóbal concentra la cadena de datos y modelos (T-09 a T-19). Cualquier retraso impacta directamente la fecha de entrega final.
                 </p>
               </div>
@@ -213,39 +213,39 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
         </div>
 
         {/* Cambio de Alcance Card */}
-        <div className="bg-blue-50/40 rounded-2xl p-6 border border-blue-200 shadow-sm">
+        <div className="bg-[#F4FAF7] rounded-2xl p-6 border border-[#DAEBE3] shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-700">
-              <FileText className="w-5 h-5 text-blue-600" />
+            <div className="w-10 h-10 rounded-xl bg-[#DAEBE3] border border-[#BDD9CE] flex items-center justify-center text-[#2F614E]">
+              <FileText className="w-5 h-5 text-[#2F614E]" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-slate-900">
+              <h3 className="text-base font-bold text-[#3D4A3E]">
                 Cambio de Alcance (Comité del 29-sep)
               </h3>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-[#657166]">
                 Aprobado formalmente sin modificaciones de fecha final ni sobrecosto
               </p>
             </div>
           </div>
 
-          <div className="space-y-3 text-sm text-slate-700">
-            <div className="p-3 rounded-xl bg-white border border-blue-100">
-              <span className="font-semibold text-slate-900">Qué cambió:</span>
-              <p className="text-xs text-slate-600 mt-1">
+          <div className="space-y-3 text-sm text-[#4D594E]">
+            <div className="p-3 rounded-xl bg-white border border-[#DAEBE3]">
+              <span className="font-semibold text-[#3D4A3E]">Qué cambió:</span>
+              <p className="text-xs text-[#657166] mt-1">
                 Se retiró al veterinario y a la clínica piloto. Se renombraron las tareas T-02, T-09, T-11, T-34 y T-35 conservando su ID.
               </p>
             </div>
 
-            <div className="p-3 rounded-xl bg-white border border-blue-100">
-              <span className="font-semibold text-slate-900">Mecanismo de compensación:</span>
-              <p className="text-xs text-slate-600 mt-1">
+            <div className="p-3 rounded-xl bg-white border border-[#DAEBE3]">
+              <span className="font-semibold text-[#3D4A3E]">Mecanismo de compensación:</span>
+              <p className="text-xs text-[#657166] mt-1">
                 Regla clínica precautoria <strong>"ante la duda, subir de nivel"</strong>, casos ambiguos marcados en base v2 y declaración explícita de la limitación metodológica en la memoria final.
               </p>
             </div>
 
-            <div className="p-3 rounded-xl bg-white border border-blue-100">
-              <span className="font-semibold text-slate-900">Control de cambios pendiente:</span>
-              <p className="text-xs text-slate-600 mt-1">
+            <div className="p-3 rounded-xl bg-white border border-[#DAEBE3]">
+              <span className="font-semibold text-[#3D4A3E]">Control de cambios pendiente:</span>
+              <p className="text-xs text-[#657166] mt-1">
                 Las 9 variables sugeridas por Sara, la capa de reglas y notas PetEVAL deben pasar por comité antes de ingresar al Gantt oficial.
               </p>
             </div>
