@@ -9,7 +9,6 @@ import { GanttScheduleView } from './components/GanttScheduleView';
 import { RisksAndDataQualityView } from './components/RisksAndDataQualityView';
 import { ClinicalSimulatorView } from './components/ClinicalSimulatorView';
 import { DatasetExplorerView } from './components/DatasetExplorerView';
-import { GitHubExportView } from './components/GitHubExportView';
 import { PrintReportModal } from './components/PrintReportModal';
 import { ClinicalCase } from './data/reportData';
 
@@ -50,10 +49,6 @@ export default function App() {
 
         {activeTab === 'dataset' && (
           <DatasetExplorerView onLoadCaseInSimulator={handleLoadCaseInSimulator} />
-        )}
-
-        {activeTab === 'github' && (
-          <GitHubExportView />
         )}
       </main>
 

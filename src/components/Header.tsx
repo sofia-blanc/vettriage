@@ -22,8 +22,7 @@ export type NavigationTab =
   | 'gantt' 
   | 'riesgos' 
   | 'simulador' 
-  | 'dataset' 
-  | 'github';
+  | 'dataset';
 
 interface HeaderProps {
   activeTab: NavigationTab;
@@ -147,18 +146,6 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Database className="w-3.5 h-3.5" />
             <span>Casos (138)</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('github')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap cursor-pointer ${
-              activeTab === 'github'
-                ? 'bg-slate-700 text-white border border-slate-500'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800'
-            }`}
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>GitHub & Repositorio</span>
           </button>
         </nav>
       </div>

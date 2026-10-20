@@ -155,31 +155,40 @@ npm run dev
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-            <span className="font-bold text-slate-900 block font-mono text-sm mb-1">
+            <span className="font-bold text-slate-900 block font-mono text-sm mb-1 text-teal-700">
+              app.py / main.py
+            </span>
+            <p className="text-slate-600">
+              <strong>Main para Streamlit (Python):</strong> Archivo principal completo para ejecutar con <code>streamlit run app.py</code>.
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <span className="font-bold text-slate-900 block font-mono text-sm mb-1 text-blue-700">
               /src/main.tsx
             </span>
             <p className="text-slate-600">
-              <strong>Main file path oficial:</strong> Punto de arranque de la aplicación React 19 + TypeScript, monta el árbol en el DOM.
+              <strong>Main para React + TS:</strong> Punto de arranque de la aplicación web React 19 + TypeScript.
             </p>
           </div>
 
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-            <span className="font-bold text-slate-900 block font-mono text-sm mb-1">
+            <span className="font-bold text-slate-900 block font-mono text-sm mb-1 text-indigo-700">
               /src/App.tsx
             </span>
             <p className="text-slate-600">
-              <strong>Componente Principal:</strong> Orquesta las pestañas de Informe de Avance, Gantt, Riesgos y Simulador de Triaje.
+              <strong>Componente Raíz React:</strong> Orquesta todas las vistas, simulador y exportador.
             </p>
           </div>
 
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-            <span className="font-bold text-slate-900 block font-mono text-sm mb-1">
-              /index.html
+            <span className="font-bold text-slate-900 block font-mono text-sm mb-1 text-emerald-700">
+              requirements.txt
             </span>
             <p className="text-slate-600">
-              <strong>Contenedor HTML raíz:</strong> Carga fuentes, estilos y el script modular de Vite.
+              <strong>Dependencias Python:</strong> Incluye <code>streamlit</code>, <code>pandas</code> y <code>plotly</code>.
             </p>
           </div>
         </div>
