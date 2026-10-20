@@ -1,0 +1,7 @@
+{
+  "name": "Vet-Triage · Sistema de Triaje y Gestión de Avance",
+  "description": "Plataforma intuitiva del proyecto Vet-Triage: Informe consolidado de avance, cronograma Gantt de 39 tareas, matriz de riesgos, explorador de 138 casos clínicos y simulador de triaje veterinario.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
